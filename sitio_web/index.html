@@ -1,20 +1,147 @@
 <!DOCTYPE html>
-<html lang="es">
+<html class="light" lang="es">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Machine Learning Engineering (MLE/MLOPS)</title>
-  <link rel="stylesheet" href="style.css">
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>MLE/MLOPS - Engineering Mastery</title>
+<link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@600;700&family=Inter:wght@400;500&family=Geist&display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script>
+    tailwind.config = {
+        theme: {
+            extend: {
+                colors: {
+                    "primary": "#131b2e",
+                    "on-primary": "#ffffff",
+                    "primary-container": "#0d1c2d",
+                    "secondary": "#00668a",
+                    "secondary-container": "#40c2fd",
+                    "on-secondary-container": "#004d6a",
+                    "secondary-fixed": "#c4e7ff",
+                    "on-secondary-fixed": "#001e2c",
+                    "background": "#f7f9fb",
+                    "surface-container-low": "#f2f4f6",
+                    "surface-container-high": "#e6e8ea",
+                    "on-surface": "#191c1e",
+                    "on-surface-variant": "#45464d",
+                    "outline-variant": "#c6c6cd",
+                },
+                borderRadius: { "DEFAULT": "0.125rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px" },
+                fontFamily: {
+                    "headline": ["Hanken Grotesk", "sans-serif"],
+                    "body": ["Inter", "sans-serif"],
+                    "code": ["Geist", "monospace"],
+                },
+            },
+        },
+    }
+</script>
+<style>
+    .material-symbols-outlined { font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24; }
+    .technical-grid { background-image: radial-gradient(circle, #e2e8f0 1px, transparent 1px); background-size: 24px 24px; }
+</style>
 </head>
-<body>
-  <h1>Machine Learning Engineering (MLE/MLOPS)</h1>
-  <nav>
-    <a href="proyectos.html">Proyectos</a>
-    <a href="laboratorios.html">Laboratorios</a>
-    <a href="casos_estudio.html">Casos de Estudio</a>
-    <a href="talleres.html">Talleres</a>
-  </nav>
-  <p>Bienvenida al sitio web del curso Machine Learning Engineering (MLOPS).</p>
-  <footer>Sitio creado con GitHub Pages</footer>
+<body class="bg-background text-on-surface font-body selection:bg-secondary-fixed">
+
+<!-- Navegación -->
+<nav class="bg-primary fixed top-0 left-0 w-full z-50 border-b border-outline-variant">
+<div class="flex justify-between items-center w-full px-6 py-4 max-w-[1280px] mx-auto">
+<a href="index.html" class="font-headline text-2xl font-bold text-on-primary">MLE/MLOPS</a>
+<div class="hidden md:flex items-center gap-8 text-base">
+<a class="text-on-primary/80 hover:text-on-primary transition-colors" href="proyectos.html">Proyectos</a>
+<a class="text-on-primary/80 hover:text-on-primary transition-colors" href="laboratorios.html">Laboratorios</a>
+<a class="text-on-primary/80 hover:text-on-primary transition-colors" href="casos_estudio.html">Casos de Estudio</a>
+<a class="text-on-primary/80 hover:text-on-primary transition-colors" href="talleres.html">Talleres</a>
+</div>
+</div>
+</nav>
+
+<main class="pt-20">
+
+<!-- Hero -->
+<section class="relative min-h-[560px] flex items-center overflow-hidden technical-grid px-6">
+<div class="relative z-10 max-w-[1280px] mx-auto w-full grid md:grid-cols-2 gap-12 items-center">
+<div>
+<div class="inline-block px-3 py-1 bg-secondary-fixed text-on-secondary-fixed rounded-full font-code text-sm mb-6">UVG-CS-402</div>
+<h1 class="font-headline text-4xl md:text-5xl font-bold text-primary mb-4 leading-tight">Machine Learning Engineering (MLE/MLOPS)</h1>
+<p class="text-on-surface-variant max-w-xl mb-8 text-lg">Bienvenido al Sitio Web del curso Machine Learning Engineering (MLOPS). Domina la ingeniería de sistemas inteligentes, desde la experimentación hasta el despliegue escalable en producción.</p>
+<div class="flex flex-wrap gap-4">
+<a href="proyectos.html" class="bg-primary text-on-primary px-8 py-3 rounded-lg font-bold hover:opacity-90 transition-all">Ver Proyectos</a>
+<a href="talleres.html" class="border border-primary text-primary px-8 py-3 rounded-lg font-bold hover:bg-primary/5 transition-all">Ver Talleres</a>
+</div>
+</div>
+<div class="hidden md:flex justify-center items-center">
+<img src="https://i.pinimg.com/originals/35/e1/92/35e192e545252e3f86085e41afa15f6f.gif" alt="Animación Machine Learning" class="max-w-full h-auto rounded-xl"/>
+</div>
+</div>
+</section>
+
+<!-- Bento Grid -->
+<section class="max-w-[1280px] mx-auto px-6 py-20">
+<div class="mb-12">
+<h2 class="font-headline text-3xl font-bold text-primary mb-2">Estructura del Curso</h2>
+<div class="h-1 w-24 bg-secondary-container"></div>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-12 gap-6 md:auto-rows-[280px]">
+
+<a href="proyectos.html" class="md:col-span-8 bg-surface-container-low border border-outline-variant rounded-xl p-8 flex flex-col justify-between group hover:border-secondary-container transition-colors">
+<div>
+<span class="material-symbols-outlined text-4xl text-primary mb-4" style="font-variation-settings: 'FILL' 1;">folder_special</span>
+<h3 class="font-headline text-3xl font-semibold mb-2">Proyectos</h3>
+<p class="text-on-surface-variant max-w-md">Construye soluciones de extremo a extremo, aplicando pipelines de CI/CD para modelos de aprendizaje automático.</p>
+</div>
+<div class="flex items-center gap-4">
+<span class="px-3 py-1 bg-surface-container-high rounded font-code text-xs tracking-wide">END-TO-END</span>
+</div>
+</a>
+
+<div class="md:col-span-4 bg-primary text-on-primary rounded-xl p-8 flex flex-col justify-between relative overflow-hidden">
+<div class="relative z-10">
+<span class="material-symbols-outlined text-4xl mb-4">biotech</span>
+<h3 class="font-headline text-3xl font-semibold mb-2">Laboratorios</h3>
+<p class="text-on-primary/80 text-sm">Experimentación técnica con frameworks de vanguardia: PyTorch, MLflow y Docker.</p>
+</div>
+<div class="absolute -right-8 -bottom-8 opacity-10">
+<span class="material-symbols-outlined text-[160px]">science</span>
+</div>
+</div>
+
+<a href="casos_estudio.html" class="md:col-span-4 bg-white border border-outline-variant rounded-xl p-8 flex flex-col hover:shadow-xl hover:shadow-primary/5 transition-all">
+<span class="material-symbols-outlined text-4xl text-secondary mb-4">assignment_turned_in</span>
+<h3 class="font-headline text-3xl font-semibold mb-2">Casos de Estudio</h3>
+<p class="text-on-surface-variant mb-6 text-sm">Análisis de implementaciones reales en gigantes tecnológicos y startups de IA.</p>
+<span class="mt-auto flex items-center text-secondary font-bold gap-2">Explorar casos<span class="material-symbols-outlined">arrow_forward</span></span>
+</a>
+
+<a href="talleres.html" class="md:col-span-8 bg-primary-container text-on-primary rounded-xl p-8 flex flex-col justify-center relative overflow-hidden">
+<div class="max-w-md relative z-10">
+<span class="material-symbols-outlined text-4xl mb-4 text-secondary-container">construction</span>
+<h3 class="font-headline text-3xl font-semibold mb-2">Talleres</h3>
+<p class="text-on-primary/80 mb-6 text-sm">Sesiones prácticas interactivas para resolver retos de ingeniería en tiempo real.</p>
+<span class="inline-flex items-center gap-2 bg-secondary-container text-on-secondary-container px-6 py-2 rounded-lg font-bold">Ir a Talleres</span>
+</div>
+</a>
+
+</div>
+</section>
+
+</main>
+
+<!-- Footer -->
+<footer class="bg-primary border-t border-outline-variant">
+<div class="w-full py-16 px-6 flex flex-col md:flex-row justify-between items-center max-w-[1280px] mx-auto text-on-primary text-sm gap-6">
+<div class="flex flex-col gap-2 items-center md:items-start">
+<span class="font-code text-secondary-fixed">MLE_STUDY_HUB_2024</span>
+<p class="opacity-70">Sitio creado con GitHub Pages</p>
+</div>
+<div class="flex gap-8">
+<a class="text-on-primary/70 hover:text-secondary-fixed transition-colors" href="index.html">Inicio</a>
+<a class="text-on-primary/70 hover:text-secondary-fixed transition-colors" href="proyectos.html">Proyectos</a>
+<a class="text-on-primary/70 hover:text-secondary-fixed transition-colors" href="talleres.html">Talleres</a>
+</div>
+</div>
+</footer>
+
 </body>
 </html>
