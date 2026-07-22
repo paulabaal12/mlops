@@ -72,7 +72,32 @@
 </div>
 </div>
 <div class="hidden md:flex justify-center items-center">
-<img src="https://i.pinimg.com/originals/35/e1/92/35e192e545252e3f86085e41afa15f6f.gif" alt="Animación Machine Learning" class="max-w-full h-auto rounded-xl"/>
+<!-- Carrusel de gifs -->
+<div id="carousel" class="w-full max-w-md flex flex-col items-center gap-4">
+<div class="flex items-center gap-3 w-full">
+<!-- Flecha izquierda (fuera del gif) -->
+<button id="carousel-prev" aria-label="Anterior" class="flex-shrink-0 w-11 h-11 flex items-center justify-center rounded-full bg-primary text-on-primary hover:bg-secondary transition-colors shadow-md">
+<span class="material-symbols-outlined">chevron_left</span>
+</button>
+<!-- Marco del gif -->
+<div class="flex-grow rounded-xl overflow-hidden border border-outline-variant code-shadow bg-white p-4">
+<div class="overflow-hidden rounded-lg">
+<div id="carousel-track" class="flex transition-transform duration-700 ease-in-out">
+<img src="https://i.pinimg.com/originals/fc/09/fa/fc09fa23271bf9fe9e480fb94d641a57.gif" alt="Animación 1" class="w-full flex-shrink-0 object-contain aspect-square"/>
+<img src="https://i.pinimg.com/originals/4f/90/8e/4f908ef769420f3e7503887a65d84572.gif" alt="Animación 2" class="w-full flex-shrink-0 object-contain aspect-square"/>
+<img src="https://i.pinimg.com/originals/ba/e3/0e/bae30e0c7acfec296e5a30d0a75af0f1.gif" alt="Animación 3" class="w-full flex-shrink-0 object-contain aspect-square"/>
+<img src="https://i.pinimg.com/originals/35/e1/92/35e192e545252e3f86085e41afa15f6f.gif" alt="Animación 4" class="w-full flex-shrink-0 object-contain aspect-square"/>
+</div>
+</div>
+</div>
+<!-- Flecha derecha (fuera del gif) -->
+<button id="carousel-next" aria-label="Siguiente" class="flex-shrink-0 w-11 h-11 flex items-center justify-center rounded-full bg-primary text-on-primary hover:bg-secondary transition-colors shadow-md">
+<span class="material-symbols-outlined">chevron_right</span>
+</button>
+</div>
+<!-- Puntitos (debajo del gif) -->
+<div id="carousel-dots" class="flex justify-center gap-2"></div>
+</div>
 </div>
 </div>
 </section>
@@ -130,7 +155,62 @@
 
 <!-- Footer -->
 <footer class="bg-primary border-t border-outline-variant">
-<div class="w-full py-16 px-6 flex flex-col md:flex-row justify-between items-center max-w-[1280px] mx-auto text-on-primary text-sm gap-6">
+<div class="max-w-[1280px] mx-auto px-6 py-16">
+
+<!-- Integrantes -->
+<div class="mb-12">
+<div class="flex items-center gap-3 mb-6">
+<span class="material-symbols-outlined text-secondary-container">group</span>
+<h3 class="font-headline text-xl font-semibold text-on-primary">Integrantes del Grupo</h3>
+</div>
+<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+<div class="flex items-center gap-3 bg-white/5 border border-on-primary/10 rounded-lg p-4 hover:border-secondary-container transition-colors">
+<span class="material-symbols-outlined text-secondary-container">account_circle</span>
+<div>
+<p class="text-on-primary font-medium">Francis Aguilar</p>
+<p class="font-code text-xs text-secondary-fixed">22243</p>
+</div>
+</div>
+<div class="flex items-center gap-3 bg-white/5 border border-on-primary/10 rounded-lg p-4 hover:border-secondary-container transition-colors">
+<span class="material-symbols-outlined text-secondary-container">account_circle</span>
+<div>
+<p class="text-on-primary font-medium">Paula Barillas</p>
+<p class="font-code text-xs text-secondary-fixed">22764</p>
+</div>
+</div>
+<div class="flex items-center gap-3 bg-white/5 border border-on-primary/10 rounded-lg p-4 hover:border-secondary-container transition-colors">
+<span class="material-symbols-outlined text-secondary-container">account_circle</span>
+<div>
+<p class="text-on-primary font-medium">Bianca Calderón</p>
+<p class="font-code text-xs text-secondary-fixed">22272</p>
+</div>
+</div>
+<div class="flex items-center gap-3 bg-white/5 border border-on-primary/10 rounded-lg p-4 hover:border-secondary-container transition-colors">
+<span class="material-symbols-outlined text-secondary-container">account_circle</span>
+<div>
+<p class="text-on-primary font-medium">José Marchena</p>
+<p class="font-code text-xs text-secondary-fixed">22398</p>
+</div>
+</div>
+<div class="flex items-center gap-3 bg-white/5 border border-on-primary/10 rounded-lg p-4 hover:border-secondary-container transition-colors">
+<span class="material-symbols-outlined text-secondary-container">account_circle</span>
+<div>
+<p class="text-on-primary font-medium">Gerardo Pineda</p>
+<p class="font-code text-xs text-secondary-fixed">22880</p>
+</div>
+</div>
+<div class="flex items-center gap-3 bg-white/5 border border-on-primary/10 rounded-lg p-4 hover:border-secondary-container transition-colors">
+<span class="material-symbols-outlined text-secondary-container">account_circle</span>
+<div>
+<p class="text-on-primary font-medium">Mónica Salvatierra</p>
+<p class="font-code text-xs text-secondary-fixed">22249</p>
+</div>
+</div>
+</div>
+</div>
+
+<!-- Línea inferior -->
+<div class="flex flex-col md:flex-row justify-between items-center gap-6 pt-8 border-t border-on-primary/10 text-on-primary text-sm">
 <div class="flex flex-col gap-2 items-center md:items-start">
 <p class="opacity-70">Sitio creado con GitHub Pages</p>
 </div>
@@ -140,7 +220,50 @@
 <a class="text-on-primary/70 hover:text-secondary-fixed transition-colors" href="talleres.html">Talleres</a>
 </div>
 </div>
+
+</div>
 </footer>
+
+<script>
+(function () {
+    const track = document.getElementById('carousel-track');
+    if (!track) return;
+    const slides = track.children;
+    const total = slides.length;
+    const dotsBox = document.getElementById('carousel-dots');
+    let index = 0;
+    let timer;
+
+    // Crear puntitos
+    for (let i = 0; i < total; i++) {
+        const dot = document.createElement('button');
+        dot.className = 'w-2.5 h-2.5 rounded-full transition-all';
+        dot.setAttribute('aria-label', 'Ir a gif ' + (i + 1));
+        dot.addEventListener('click', () => { goTo(i); reset(); });
+        dotsBox.appendChild(dot);
+    }
+    const dots = dotsBox.children;
+
+    function render() {
+        track.style.transform = 'translateX(-' + (index * 100) + '%)';
+        for (let i = 0; i < total; i++) {
+            dots[i].classList.toggle('bg-secondary-container', i === index);
+            dots[i].classList.toggle('w-5', i === index);
+            dots[i].classList.toggle('bg-outline-variant', i !== index);
+        }
+    }
+    function goTo(i) { index = (i + total) % total; render(); }
+    function next() { goTo(index + 1); }
+    function prev() { goTo(index - 1); }
+    function reset() { clearInterval(timer); timer = setInterval(next, 3500); }
+
+    document.getElementById('carousel-next').addEventListener('click', () => { next(); reset(); });
+    document.getElementById('carousel-prev').addEventListener('click', () => { prev(); reset(); });
+
+    render();
+    reset();
+})();
+</script>
 
 </body>
 </html>
